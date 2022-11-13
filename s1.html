@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    
+</head>
+<style type="text/css">
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background-image:url('2.jpg');
+        background-position: center;
+        background-size: cover;
+        font-family: sans-serif;
+        margin-top: 60px;
+
+        background: linear-gradient(45deg, dodgerblue,white,purple);
+
+    }
+    h1{
+        text-decoration: underline;
+    }
+    h3{
+        color: coral;
+    }
+
+    label{
+        
+        display: inline-block;
+        margin: 0.2cm;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    
+   
+    
+    
+</style>
+<body >
+    
+
+    <h1 style="text-align: center;">Book a Call</h1>
+    <br>
+    <h3 style="text-align: center;", >Book a call slot our representative will call you. </h3>
+    <br>
+    <br>
+    <form style="text-align: center;" , onsubmit="savetoLocalStorage(event)">
+       
+        <div>
+            <label>Name: </label>
+         <input type="text" name="username" required/>
+        </div>
+        <br>
+        <div>
+         <label> Gender: </label>
+         Male<input type="radio"> Female<input type="radio">
+        </div>
+        <br>
+        <div>
+         <label >Email: </label>
+            <input type="email" name="emailid" required/>
+        </div>
+        <br>
+        <div>
+           <label> Phone: </label>
+           <input type="number" name="phone"/>
+        </div>
+        <br>
+        <div>
+           <label> Time :</label>
+            <input type="time" name="meettime" >
+        </div>
+        <br>
+        <div>
+           <label> Date: </label>
+           <input type="date" name="date">
+        </div>
+        <br>
+        <div>
+            <input type="submit">
+        </div>
+       
+    </form>
+    <p>qj,iinceisbmmdgassagjhcmoekprkwmsfurbakhuejnxinxxnu<br>
+    jakdopcdl,v,lep<br>
+fhefiL;OMFGGHI<br>
+</p>
+    <script>
+        function savetoLocalStorage(event){
+            event.preventDefault();
+            const name=event.target.username.value;
+            const email=event.target.emailid.value;
+            const phone=event.target.phone.value;
+            const meettime=event.target.meettime.value;
+            const date= event.target.date.value;
+            
+
+            const obj={
+                name,
+                email,
+                phone,
+                meettime,
+                date
+            }
+            localStorage.setItem(obj.email,JSON.stringify(obj));
+        }
+    </script>
+    
+</body>
+</html>
